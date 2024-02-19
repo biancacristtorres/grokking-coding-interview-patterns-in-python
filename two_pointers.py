@@ -1,14 +1,14 @@
 def is_palindrome(array):
-  left = len(array)
-  right = -1
-  for letter in (array):
-    if left - right !=0:
-      if letter == array[right]:
-        left+=1
-        right-=1
-      else:
-        return False  
+  left = 0
+  right = len(array) - 1
+
+  while left <= right:
+    if array[left] != array[right]:
+      return False
+
+    left+=1
+    right-=1 
   return True
 
-result = is_palindrome("ABCDABCD")
+result = is_palindrome("kayak")
 print(result)
